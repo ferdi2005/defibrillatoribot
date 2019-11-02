@@ -1,110 +1,78 @@
-<?php
-$lat=$_GET['lat'];
-$lon=$_GET['lon'];
-$r=$_GET['r'];
-
-?>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset=utf-8 />
-<title>Defibrillatori Lecce</title>
-<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-<script src='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.js'></script>
-<link href='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.css' rel='stylesheet' />
-<meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=1.0, user-scalable=no">
+<title>Trova i defibrillatori - Defibrillatori d'Italia</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta property="og:image" content="http://www.piersoft.it/daebot/daebot.png"/>
 
 </head>
-<body onload="getLocation()">
-  <div id='loader'><span class='message'>Sto cercando la tua posizione..</span></div>
-  <style>
-  #loader {
-      position:absolute; top:0; bottom:0; width:100%;
-      background:rgba(255, 255, 255, 1);
-      transition:background 1s ease-out;
-      -webkit-transition:background 1s ease-out;
-  }
-  #loader.done {
-      background:rgba(255, 255, 255, 0);
-  }
-  #loader.hide {
-      display:none;
-  }
-  #loader .message {
-      position:absolute;
-      left:30%;
-      top:50%;
-      font-family: Titillium Web, Arial, Sans-Serif;
-      font-size: 15px;
-  }
-  </style>
 
-<!--
-  This example requires jQuery to load the file with AJAX.
-  You can use another tool for AJAX.
+<body>
 
-  This pulls the file airports.csv, converts into into GeoJSON by autodetecting
-  the latitude and longitude columns, and adds it to the map.
+<div style="text-align: center;">
+  <h1 class="title is-1">
+    Trova Defibrillatori
+  </h1>
+  <h2 class="subtitle">Mappa globale e costruita dagli utenti dei defibrillatori</h2>
+</div>
 
-  Another CSV that you use will also need to contain latitude and longitude
-  columns, and they must be similarly named.
--->
+<div class="buttons is-centered">
+  <a class="button is-large is-primary" href="https://trovadefibrillatori.it/locate.php">Localizza ora i defibrillatori vicino a te</a>
+</div>
+<h1 class="subtitle is-danger">
+Perché TrovaDefibrillatori  
+</h1>
+In caso di arresto cardiaco la prima cosa da fare è chiamare il 112 (in Europa) e per ora il 118 in Italia. ogni minuto di mancata assistenza, fa perdere il 10% di possibilità di sopravvivenza. Ecco perchè dopo aver chiamato i soccorsi, è opportuno avere un Defibrillatore e un volontario formato nei paraggi. Ma dove trovare un DAE?
+Questo sito web ti indica i Defibrillatori presenti su <a href="https://openstreetmap.org">OpenStreetMap</a> attorno alla tua posizione.
 
-<script src='https://code.jquery.com/jquery-1.11.0.min.js'></script>
-<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-pip/v0.0.2/leaflet-pip.js'></script>
-<script>
-var latphp="";
-var lonphp="";
-var r="";
-var options = {
-  enableHighAccuracy: true,
-  timeout: 5000,
-  maximumAge: 0
-};
+<br />
+Video sulla procedura BLSD: <a href="https://www.youtube.com/watch?v=vnS_PNh0oDk">https://www.youtube.com/watch?v=vnS_PNh0oDk</a>
+<hr/>
+In case of cardiac arrest, the first thing to do is call 112 (in Europe) and now the 118 in Italy. every minute of no assistance, lose 10% chance of survival. That is why after having called for help, you should have a defibrillator and a volunteer form around. But where to find an AED?
+This website tells you the defibrillators on <a href="https://openstreetmap.org">OpenStreetMap</a> around your location. Just click "Localizza ora i defibrillatori vicino a te".
+<br />
+Video BLSD procedure: <a href="https://www.youtube.com/watch?v=vnS_PNh0oDk">https://www.youtube.com/watch?v=vnS_PNh0oDk</a>
 
-function success(pos) {
-  var crd = pos.coords;
-
-  console.log('Your current position is:');
-  console.log('Latitude : ' + crd.latitude);
-  console.log('Longitude: ' + crd.longitude);
-  console.log('More or less ' + crd.accuracy + ' meters.');
-};
-
-function error(err) {
-  alert('Devi usare https e non http nell\'URL per attivare la geolocalizzazione automatica e impostare in ON il localizzatore GPS del tuo smartphone');
-  console.warn('ERROR(' + err.code + '): ' + err.message);
-};
-function getLocation() {
-console.log('<?php echo $isSecure ?>');
-    if (navigator.geolocation ) {
-        navigator.geolocation.getCurrentPosition(showPosition, error, options);
-
-    } else {
-alert('Abilita la localizzazione GPS per cortesia :) ')
-
-    }
-}
-function showPosition(position) {
+<h1 class="subtitle is-danger">
+Come inserisco i defibrillatori su questo sito?  
+</h1>
+<a href="https://openstreetmap.org">OpenStreetMap</a> è un database globale di informazioni geografiche realizzato dagli utenti. I DAE sono codificati con il tag <b>emergency=defibrillator</b> e sempre consigliabile <b>name=nome del luogo</b>. Questo sito attinge proprio da OpenStreetMap.
+<br/>
+Qui trovi le guide per inserire facilmente i defibrillatori secondo il tuo sistema operativo:
+<h2 class="subtitle is-4">iOS (iPhone)</h2>
+Usa l'applicazione <b>Go Map!</b>, che puoi trovare a <a href="https://itunes.apple.com/us/app/go-map!!/id592990211?mt=8
+">questo link</a>
+Una volta scaricata Go Map!, segui questi passaggi:
+<ol>
+<li>crearsi un account gratuito su <a href="www.openstreetmap.org">www.openstreetmap.org</a></li>
+<li>aprire l’app Go Map!! per dispositivi mobili Apple</li>
+<li>Individuare il luogo dove avete rilevato il DAE spostando con le dita la mappa</li>
+<li>Cliccare il <b>“+”</b> e poi <b>“Tags”</b></li>
+<li>Cliccare in basso <b>“All Tags”</b> e inserire i tags <b>emergency=defibrillator</b> e <b>name=nome luogo</b>.</li>
+<li>Inviare tramite il pulsante “nuvola” la modifica effettuata inserendo una nota per propria comodità</li>
+<li>opzionalmente si possono aggiungere anche altri tags come address, phone, website ect. Infatti tale procedura vale per qualsiasi oggetto non solo per i DAE.</li>
+</ol>
+<img src="/gomapguide.png" width="200px" />
+<h2 class="subtitle is-4">Android</h2>
+Usa l'applicazione <b>Vespucci</b>, che puoi scaricare usando <a href="https://play.google.com/store/apps/details?id=de.blau.android&hl=it
+">questo link</a>. Segui quindi i seguenti passaggi:
+<ol>
+<li>Crearsi un account gratuito su <a href="www.openstreetmap.org">www.openstreetmap.org</a></li>
+<li>Aprire l’app per dispositivi mobili Android</li>
+<lI>Individuare il luogo dove avete rilevato il DAE spostando con le dita la mappa</li>
+<li>Cliccare il punto desiderato nel rettangolo in semitrasparenza e cliccare il simbolo di matita</li>
+<li>Inserire i tags <b>emergency=defibrillator</b> e <b>name=nome luogo</b>.</li>
+<li>Inviare tramite il pulsante di sincronizzazione -> carica dati nel server osm</Li>
+<li>opzionalmente si possono aggiungere anche altri tags come address, phone, website ect. Infatti tale procedura vale per qualsiasi oggetto non solo per i DAE.</li>
+<img src="/vespucciguide.png" width="200px" />
 
 
-  //  x.innerHTML = "Latitude: " + position.coords.latitude +
-  //  "<br>Longitude: " + position.coords.longitude;
-  latphp = parseFloat('<?php printf($_GET['lat']); ?>');
-  lonphp = parseFloat('<?php printf($_GET['lon']); ?>');
-  r = parseFloat('<?php printf($_GET['r']); ?>');
-  if (!latphp || 0 === latphp.length){
-    latphp=position.coords.latitude;
-    lonphp=position.coords.longitude;
-    r=1;
-  }else{
-alert ("Abilita la localizzazione sul tuo smartphone");
-  }
+<footer class="footer">
+  <div class="content has-text-centered">
 
-console.log(latphp+" "+lonphp+" "+r);
-  window.location.href = "http://www.piersoft.it/daebot/map/index.php?lat="+latphp+"&lon="+lonphp+"&r="+r;
-}
-</script>
-</body>
-</html>
+    Realizzato da <a href="www.piersoft.it">Piersoft</a> e <a href="www.iltempe.it">Il Tempe</a>. - Sito a cura di <a href="www.ferdinando.me">Ferdinando Traversa</a> - Materiale preso dal <a href="https://goo.gl/UCcwkw">Tutorial su inserimento DAE in OpenStreetMap</a> - Bot Telegram: <a href="http://t.me/defibrillatoribot">@defibrillatoribot</a> - Tutti i dati sono prelevati da <a href="www.opensteetmap.org">OpenStreetMap.</a> Data in licenza ODbL (c) OpenStreetMap contributors.
+  </div>
+</footer>
