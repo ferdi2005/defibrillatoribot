@@ -19,7 +19,7 @@
   <h2 class="subtitle">Mappa globale e costruita dagli utenti dei defibrillatori</h2>
 
 <div class="buttons is-centered">
-  <a class="button is-large is-primary" href="https://trovadefibrillatori.it/locate.php">Localizza ora i defibrillatori vicino a te</a>
+<a class="button is-large is-primary" href="https://trovadefibrillatori.it/locate.php" style="padding: 15px;padding-top:30px;padding-bottom: 30px;"><i class="fas fa-location-arrow"></i>&nbsp;&nbsp;Trova un defibrillatore<br/> vicino a te</a>
 </div>
 <h1 class="title is-3 is-danger">
 Perché TrovaDefibrillatori  
