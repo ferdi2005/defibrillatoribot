@@ -4,14 +4,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Defibrillatori by @piersoft</title>
+  <title>Risultato ricerca defibrillatori</title>
   <meta charset="utf-8" />
   <link rel="shortcut icon" href="favicon.ico" />
   <meta property="og:image" content="http://www.piersoft.it/dae/dae.png"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.2/leaflet.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" />
   <link rel="stylesheet" href="OverPassLayer.css" />
-  <script src="http://cdn.leafletjs.com/leaflet-0.6.2/leaflet-src.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet-src.js"></script>
   <script src="OverPassLayer2.js"></script>
   <style>
     body {
@@ -29,7 +29,7 @@
   <script>
 	  var attr_osm = 'Map data &copy; <a href="http://openstreetmap.org/">OpenStreetMap</a> contributors. DAE Map powered by @piersoft',
       attr_overpass = 'POI via <a href="http://www.overpass-api.de/">Overpass API</a>';
-    var osm = new L.TileLayer('http://a.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {opacity: 0.7, attribution: [attr_osm, attr_overpass].join(', ')});
+    var osm = new L.TileLayer('https://a.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {opacity: 0.7, attribution: [attr_osm, attr_overpass].join(', ')});
     var lat=parseFloat('<?php printf($_GET['lat']); ?>'),
         lon=parseFloat('<?php printf($_GET['lon']); ?>'),
           zoom=14;
@@ -77,7 +77,7 @@
     }
 
     var opl = new L.OverPassLayer({
-      endpoint: "http://overpass.osm.rambler.ru/cgi/",
+      endpoint: "https://overpass-api.de/api/",
       query: "node(BBOX)['emergency'='defibrillator'];out;",
       callback: function(data) {
         for(var i=0;i<data.elements.length;i++) {
