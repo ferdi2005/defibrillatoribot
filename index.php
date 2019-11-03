@@ -76,6 +76,6 @@ Usa l'applicazione <b>Vespucci</b>, che puoi scaricare usando <a href="https://p
 <footer class="footer">
   <div class="content has-text-centered">
 
-    Realizzato da <a href="www.piersoft.it">Piersoft</a> e <a href="www.iltempe.it">Il Tempe</a>. - Sito a cura di <a href="www.ferdinando.me">Ferdinando Traversa</a> - Materiale preso dal <a href="https://goo.gl/UCcwkw">Tutorial su inserimento DAE in OpenStreetMap</a> - Bot Telegram: <a href="http://t.me/defibrillatoribot">@defibrillatoribot</a> - Tutti i dati sono prelevati da <a href="www.opensteetmap.org">OpenStreetMap.</a> Data in licenza ODbL (c) OpenStreetMap contributors.
+    Realizzato da <a href="www.piersoft.it">Piersoft</a> e <a href="www.iltempe.it">Il Tempe</a>. - Sito a cura di <a href="www.ferdinando.me">Ferdinando Traversa</a> - Materiale preso dal <a href="https://goo.gl/UCcwkw">Tutorial su inserimento DAE in OpenStreetMap</a> - Bot Telegram: <a href="http://t.me/defibrillatoribot">@defibrillatoribot</a> - Tutti i dati sono prelevati da <a href="www.opensteetmap.org">OpenStreetMap.</a> Data in licenza ODbL (c) OpenStreetMap contributors. - <a href="https://github.com/ferdi2005/defibrillatoribot">Github</a>
   </div>
 </footer>
