@@ -56,7 +56,7 @@ Una volta scaricata Go Map!, segui questi passaggi:
 <li>Inviare tramite il pulsante “nuvola” la modifica effettuata inserendo una nota per propria comodità</li>
 <li>opzionalmente si possono aggiungere anche altri tags come address, phone, website ect. Infatti tale procedura vale per qualsiasi oggetto non solo per i DAE.</li>
 </ol>
-<img src="/gomapguide.png" width="500px" />
+<img src="/gomapguide.jpg" width="500px" />
 <h2 class="title is-5">Android</h2>
 Usa l'applicazione <b>Vespucci</b>, che puoi scaricare usando <a href="https://play.google.com/store/apps/details?id=de.blau.android&hl=it
 ">questo link</a>. Segui quindi i seguenti passaggi:
@@ -69,7 +69,7 @@ Usa l'applicazione <b>Vespucci</b>, che puoi scaricare usando <a href="https://p
 <li>Inviare tramite il pulsante di sincronizzazione -> carica dati nel server osm</Li>
 <li>opzionalmente si possono aggiungere anche altri tags come address, phone, website ect. Infatti tale procedura vale per qualsiasi oggetto non solo per i DAE.</li>
 </ol>
-<img src="/vespucciguide.png" width="500px" />
+<img src="/vespucciguide.jpg" width="500px" />
 
 </div>
 
