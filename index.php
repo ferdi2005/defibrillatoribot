@@ -43,7 +43,7 @@ Come inserisco i defibrillatori su questo sito?
 <a href="https://openstreetmap.org">OpenStreetMap</a> è un database globale di informazioni geografiche realizzato dagli utenti. I DAE sono codificati con il tag <b>emergency=defibrillator</b> e sempre consigliabile <b>name=nome del luogo</b>. Questo sito attinge proprio da OpenStreetMap.
 <br/>
 Qui trovi le guide per inserire facilmente i defibrillatori secondo il tuo sistema operativo:
-<h2 class="subtitle is-4">iOS (iPhone)</h2>
+<h2 class="title is-4">iOS (iPhone)</h2>
 Usa l'applicazione <b>Go Map!</b>, che puoi trovare a <a href="https://itunes.apple.com/us/app/go-map!!/id592990211?mt=8
 ">questo link</a>
 Una volta scaricata Go Map!, segui questi passaggi:
